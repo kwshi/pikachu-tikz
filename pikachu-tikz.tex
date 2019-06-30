@@ -1,0 +1,197 @@
+\begin{tikzpicture}[x=.5in, y=.5in]
+  \definecolor{deep green}{HTML}{346d33}
+  \definecolor{light green}{HTML}{649935}
+  \definecolor{bright green}{HTML}{6cad33}
+  \definecolor{green}{HTML}{4e9429}
+  \definecolor{cool green}{HTML}{2b5a3a}
+  \definecolor{pale green}{HTML}{487e45}
+  \definecolor{dark green}{HTML}{123214}
+  \definecolor{sky}{HTML}{75c0a7}
+
+  \definecolor{pants}{HTML}{934e33}
+  \definecolor{pants stroke}{HTML}{443403}
+  \definecolor{hand}{HTML}{ebb278}
+  \definecolor{hand stroke}{HTML}{742f07}
+
+  \definecolor{pikachu}{HTML}{efc41e}
+  \definecolor{pikachu stroke}{HTML}{1f1f03}
+  \definecolor{eartip}{HTML}{211e00}
+  \definecolor{cheek}{HTML}{d05512}
+  \definecolor{cheek stroke}{HTML}{993000}
+  \definecolor{eye}{HTML}{510a01}
+  \definecolor{glare}{HTML}{f4b97d}
+  \definecolor{nose}{HTML}{692601}
+  \definecolor{mouth}{HTML}{711900}
+  \definecolor{tongue}{HTML}{ea8159}
+
+  \tikzset{
+    stroke/.style={line width=.6ex, draw=#1},
+    eye/.pic={
+      \draw [stroke=eye, fill=eye]
+      (0,0)
+      .. controls +(-.1,-.1) and +(-.2,0) .. (.2,-.4)
+      .. controls +(.2,0) and +(0,-.2) .. (.4,-.2)
+      .. controls +(0,.3) and +(.1,.1) .. cycle;
+      \fill [glare, path fading={
+        circle with fuzzy edge 20 percent
+      }]
+      (.1,-.1) circle [radius=.1];
+    },
+  }
+
+  \clip [rounded corners=1ex, preaction={fill=sky}]
+  (0,0) rectangle (7,6);
+
+  \fill [light green]
+  (4,7) -- (4.9,4)
+  .. controls (5,5.8) and (5.4,5.9) .. (7,5.8)
+  |- (0,0) |- cycle;
+
+  \fill [bright green]
+  (5.4,5)
+  .. controls (5.5,4.8) and (6.7,4.8) .. (6.8,4.9)
+  .. controls (6.9,5) and (6.7,5.4) .. (6.5,5.5)
+  .. controls (6.3,5.6) and +(.2,.1) .. (5.7,5.5)
+  .. controls +(-.2,-.1) and (5.3,5.1) .. cycle
+
+  (1.2,5.5)
+  .. controls (1.5,5.2) and (1.7,5.3) .. (1.1,7)
+  -- cycle;
+
+  \fill [deep green]
+  (7,4) -- (4,3) -- (2.2,4.9)
+  .. controls +(-.2,0) and +(.2,.2) .. (1.4,4.5)
+  -- (1.7,3.7)
+  .. controls +(-.2,-.3) and +(.7,.3) .. (.7,3.9)
+  -| (0,0) -| cycle;
+
+  \fill [cool green]
+  (2.2,3.3)
+  .. controls +(-.1,-.1) and +(.1,0) .. (1.8,3.1)
+  .. controls +(-.2,0) and +(.3,0) .. (1,3.3)
+  .. controls +(-.3,0) and +(.3,-.2) .. (.3,2.9)
+  -- (0,1.7)
+  .. controls +(.2,-.2) .. (5,2)
+
+  (7,4) -- (4,3) -- (6,2.6)
+  .. controls +(.3,.4) and +(-.3,-.2) .. (7,2.8);
+
+  \fill [dark green]
+  (.3,1.7)
+  .. controls +(0,-.2) and +(-.3,0) .. +(.5,-.3)
+  .. controls +(.3,0) and +(0,-.2) .. +(1.1,-.1)
+  .. controls +(0,.3) and +(.4,0) .. +(.5,.4)
+  .. controls +(-.3,0) and +(0,.2) .. cycle
+
+  (1.9,2.9)
+  .. controls +(-.1,0) and +(.1,.2) .. +(-.3,-.3)
+  .. controls +(-.1,-.2) and +(-.2,0) .. +(-.1,-.5)
+  .. controls +(.1,0) and +(-.1,-.2) .. +(.2,-.3)
+  .. controls +(.1,.2) and +(.3,0) .. cycle;
+
+  \fill [pale green]
+  (2.2,2.4)
+  .. controls +(-.8,.3) and +(.8,0) .. (.9,1.4)
+  .. controls +(-.3,0) and +(-.3,0) .. (.7,1.3)
+  .. controls +(.9,0) and +(-1.6,0) .. (2.1,1);
+
+  \fill [green]
+  (7,2.5)
+  .. controls +(-.6,-.1) and +(.1,.7) .. (6.2,1.7)
+  .. controls +(0,-.5) and +(-.2,0) .. (7,1.3)
+
+  (2.2,.6)
+  .. controls +(-1.5,.2) and +(.4,-.2) .. (.6,.7)
+  .. controls +(-.2,.1) and +(.2,.1) .. (0,.7)
+  -- (0,.6)
+  .. controls +(.7,.1) and +(-.7,0) .. (.8,.3)
+  .. controls +(.4,0) and +(.1,.2) .. (1.2,0)
+  -- (3,0) |- (2.4,.3)
+  -- (2.3,.5)
+
+  (7,1)
+  .. controls +(-.2,0) and +(.2,.2) .. (6.4,.7)
+  .. controls +(.2,-.1) and +(-.2,0) .. (7,.6);
+
+
+  \fill [pants, stroke=pants stroke]
+  (-.1,1)
+  .. controls (0,2) and (1,5) .. (1.6,6.4)
+  .. controls (2.4,5) and (2.8,1) .. (3.2,0)
+  -- (6,0)
+  .. controls (4.6,6) .. (4.4,6.6)
+  -- (-2,8) -- cycle;
+
+  \fill [hand, stroke=hand stroke]
+  (-.1,5.5)
+  .. controls (.5,5.6) and (.8,5.8) .. (.9,7)
+  -- (-1,8) -- cycle;
+
+  \newcommand{\pikachu}{
+    (6.7,-.1)
+    .. controls (6.6,.8) and (6.4,1.3) .. (6.2,1.9)
+    .. controls (6,2.5) and (6,2.6) .. (5.8,3)
+    -- +(.1,-.1)
+    .. controls (6.6,3.4) and (7.2,4) .. (8,4.8)
+    .. controls (7,4.6) and (5.8,4) .. (5.4,3.8)
+    .. controls (5.2,3.7) and (5,3.7) .. (5,3.7)
+    .. controls (4.4,3.7) and (4.2,3.7) .. (3.2,3.6)
+    .. controls (1.8,4.6) and (1.2,4.8) .. (.9,5)
+    .. controls +(.6,-1) and +(-.8,.7) .. (2.4,3)
+    -- +(.1,.1)
+    .. controls +(-.3,-.5) and (2.2,2.2) .. (2.1,1.7)
+    .. controls (2,1.3) and (2,1.1) .. (2,1)
+    .. controls (2,.7) and (2.4,.4) .. (2.4,.2)
+    .. controls (2.4,0) and (2.2,-.2) .. (2.2,-.4)
+    -- (4,-1) -- cycle
+  }
+  \begin{scope}
+    \clip [preaction={fill=pikachu}] \pikachu;
+
+    \fill [eartip]
+    (1.8,3.5)
+    .. controls (1.2,4.6) and +(-.1,-.1) .. (1.5,4.7)
+    -- (0,6) -- cycle;
+
+    \pic [at={(2.8,2.4)}] {eye};
+    \pic [at={(4.7,2.4)}] {eye};
+
+    \draw [stroke=nose, fill=nose] (3.6,1.8)
+    .. controls +(-.1,0) and +(-.2,0) .. +(.2,-.1)
+    .. controls +(.1,0) and +(.3,0) .. cycle;
+
+    \draw [stroke=cheek stroke, fill=cheek]
+    (2,1.2)
+    .. controls +(0,-.1) and +(-.2,0) .. +(.4,-.3)
+    .. controls +(.2,0) and +(0,-.3) .. +(.7,.1)
+    .. controls +(0,.2) and +(.2,0) .. +(.3,.4)
+    .. controls +(-.2,0) and +(0,.3) .. cycle
+
+    (5.2,1.3)
+    .. controls +(0,-.2) and +(-.2,0) .. +(.3,-.4)
+    -- +(.4,-.4)
+    .. controls +(.2,0) and +(0,-.3) .. +(.7,0)
+    .. controls +(0,.1) and +(.2,0) .. +(.4,.3)
+    -- +(.3,.3)
+    .. controls +(-.2,0) and +(0,.1) .. cycle;
+
+    \newcommand{\mouth}{
+      (3.5,1.2)
+      .. controls +(-.1,-.1) and +(-.1,.2) .. +(0,-.4)
+      .. controls +(.1,-.2) and +(-.1,0) .. +(.4,-.6)
+      .. controls +(.1,0) and +(-.1,-.1) .. +(.7,-.5)
+      .. controls +(.1,.1) and +(.1,-.1) .. +(.7,0)
+      .. controls +(-.1,.1) and +(.1,.1) .. cycle
+    }
+    \begin{scope}
+      \clip [postaction={fill=mouth}] \mouth;
+
+      \fill [tongue]
+      (4,1.3)
+      .. controls +(-.2,-.1) and +(0,.4) .. (3.5,.8)
+      -- ++(0,-1) -| +(2,2) -- cycle;
+    \end{scope}
+    \draw [stroke, draw=mouth] \mouth;
+  \end{scope}
+  \draw [stroke, draw=eartip] \pikachu;
+\end{tikzpicture}
