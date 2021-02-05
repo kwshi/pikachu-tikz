@@ -1,1 +1,1 @@
-![pikachu](pikachu.png)
+![pikachu](pikachu.svg)
