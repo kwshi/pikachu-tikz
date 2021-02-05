@@ -1,1 +1,0 @@
-![pikachu.pdf](pikachu.pdf)
